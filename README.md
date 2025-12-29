@@ -4,30 +4,11 @@ A GitHub Action that sighs. That's it. When your CI pipeline reaches Maud's step
 
 Every time.
 
-## Features
-
-- **Sigh on start.** When the action begins, Maud emits a sigh to the workflow log. One sigh. A small, tired exhale. Not dramatic — she's past that.
-- **No side effects.** Maud does not alter files, set outputs, fail the build, or affect any other step. She is purely observational in her exhaustion.
-- **Always sighs.** Maud sighs regardless of the trigger event, the branch, the repository, the time of day. There are no conditions under which Maud does not sigh. She has tried.
-- **Exits successfully.** After sighing, Maud exits with code 0. She is tired, not spiteful.
-- **Fast.** The sigh should be near-instantaneous. Maud is efficient in her weariness.
-- **Lightweight.** Minimal image size. Maud carries enough already.
-- **No dependencies.** Maud does not need your tokens, your secrets, or your environment variables. She just needs a moment.
-
 ## Motivation
 
 CI pipelines are relentless. They run and run and run. They never complain. They never pause to feel the weight of yet another `fix: lint` commit pushed at 11:47 PM on a Sunday. Someone should.
 
 Maud does.
-
-## Usage
-
-```yaml
-steps:
-  - uses: vladcuciureanu/maud@v1
-```
-
-There is nothing to configure.
 
 ## What it does
 
@@ -39,6 +20,15 @@ When your CI pipeline reaches Maud's step, she prints:
 
 Then she exits. Successfully. She is tired, not spiteful.
 
+## Usage
+
+```yaml
+steps:
+  - uses: vladcuciureanu/maud@v1
+```
+
+There is nothing to configure.
+
 ## Inputs
 
 None. Maud doesn't need anything from you.
@@ -46,6 +36,16 @@ None. Maud doesn't need anything from you.
 ## Outputs
 
 None. Maud has nothing left to give.
+
+## Features
+
+- **Sigh on start.** When the action begins, Maud emits a sigh to the workflow log. One sigh. A small, tired exhale. Not dramatic — she's past that.
+- **No side effects.** Maud does not alter files, set outputs, fail the build, or affect any other step. She is purely observational in her exhaustion.
+- **Always sighs.** Maud sighs regardless of the trigger event, the branch, the repository, the time of day. There are no conditions under which Maud does not sigh. She has tried.
+- **Exits successfully.** After sighing, Maud exits with code 0. She is tired, not spiteful.
+- **Fast.** The sigh should be near-instantaneous. Maud is efficient in her weariness.
+- **Lightweight.** Minimal image size. Maud carries enough already.
+- **No dependencies.** Maud does not need your tokens, your secrets, or your environment variables. She just needs a moment.
 
 ## Non-Goals
 
