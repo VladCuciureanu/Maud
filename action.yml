@@ -1,0 +1,5 @@
+name: Maud
+description: A CI pipeline step that sighs.
+runs:
+  using: docker
+  image: Dockerfile
