@@ -1,59 +1,33 @@
 # Maud
 
-A GitHub Action that sighs. That's it. When your CI pipeline reaches Maud's step, she lets out a small, tired exhale — and then lets the rest of your pipeline carry on. She changes nothing. She breaks nothing. She just sighs.
+A GitHub Docker action that sighs in your workflow log and lets the rest of the job carry on.
 
-Every time.
-
-## Motivation
-
-CI pipelines are relentless. They run and run and run. They never complain. They never pause to feel the weight of yet another `fix: lint` commit pushed at 11:47 PM on a Sunday. Someone should.
-
-Maud does.
-
-## What it does
-
-When your CI pipeline reaches Maud's step, she prints:
+When the job reaches Maud's step, the log shows:
 
 ```
 *sigh*
 ```
 
-Then she exits. Successfully. She is tired, not spiteful.
+Then she exits with code 0. She is tired, not spiteful.
+
+## Requirements
+
+A Linux runner, such as `ubuntu-latest`. Maud is a Docker container action (Alpine 3.21), and GitHub runs those only on Linux.
 
 ## Usage
 
 ```yaml
-steps:
-  - uses: vladcuciureanu/maud@v1
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: VladCuciureanu/Maud@main
 ```
 
-There is nothing to configure.
+Maud has no inputs and no outputs. She needs nothing from you and has nothing left to give.
 
-## Inputs
+She does not read your secrets, touch your files or fail your build, and she sighs on every run, whatever the event, branch or time of day. She will not explain why. You know why.
 
-None. Maud doesn't need anything from you.
+## License
 
-## Outputs
-
-None. Maud has nothing left to give.
-
-## Features
-
-- **Sigh on start.** When the action begins, Maud emits a sigh to the workflow log. One sigh. A small, tired exhale. Not dramatic — she's past that.
-- **No side effects.** Maud does not alter files, set outputs, fail the build, or affect any other step. She is purely observational in her exhaustion.
-- **Always sighs.** Maud sighs regardless of the trigger event, the branch, the repository, the time of day. There are no conditions under which Maud does not sigh. She has tried.
-- **Exits successfully.** After sighing, Maud exits with code 0. She is tired, not spiteful.
-- **Fast.** The sigh should be near-instantaneous. Maud is efficient in her weariness.
-- **Lightweight.** Minimal image size. Maud carries enough already.
-- **No dependencies.** Maud does not need your tokens, your secrets, or your environment variables. She just needs a moment.
-
-## Non-Goals
-
-- Maud will not offer encouragement.
-- Maud will not explain why she is sighing. You know why.
-- Maud will not sigh louder based on how many times the workflow has been re-run. She considered it.
-- Maud will not integrate with Slack, Discord, or any notification service. She is not looking for attention. She is just tired.
-
-## Is it working?
-
-Maud is working if, upon seeing her sigh in the logs, you pause — just for a moment — and think: "yeah."
+MIT. See [LICENSE](LICENSE).
